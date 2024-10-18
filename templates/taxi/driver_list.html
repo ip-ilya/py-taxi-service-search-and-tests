@@ -9,11 +9,11 @@
     </a>
   </h1>
 
-  <form action="" method="get" class="form-inline">
-    {{ search_form| crispy}}
-    <input type="submit" value="🔎" class="btn-primary btn">
-  </form>
-
+  {% block search %}
+    {% include "includes/search.html" %}
+  {% endblock %}
+  <br>
+  
   {% if driver_list %}
     <table class="table">
       <tr>
